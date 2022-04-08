@@ -46,6 +46,7 @@ const showResults = (pick, opponentPick) => {
       results.textContent = 'You lose';
    }
    results.parentNode.classList.add('results--visible');
+   slideInResults()
 }
 
 
@@ -90,8 +91,16 @@ const isWin = (player, opponent) => {
 }
 
 
+const slideInResults = () => {
+   gsap.from('.results', {
+      opacity: 0,
+      x: 100,
+      duration: 0.4
+   })
+}
+
 gameItems.forEach((item, index) => item.onclick = () => pickItem(item, index));
 
-restartBtn.onclick = restartGame;
+restartBtn.onclick = restartGame
 openRules.onclick = toggleRules;
 closeRules.onclick = toggleRules;
