@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1 class="header_title">
+        <div>Rock</div>
+        <div>Paper</div>
+        <div>Scissors</div>
+      </h1>
+
+      <div class="header_counter">
+        <small class="header_score">Score</small>
+        <strong class="header_score-count">0</strong>
+      </div>
+    </header>
+
+    <div class="game game--bg">
+      <div class="game_item game_item--first" id="paper">
+        <div class="game_character game_character--blue">
+          <img src="./images/icon-paper.svg" alt="Paper" class="game_img">
+        </div>
+      </div>
+
+      <div class="game_item game_item--second" id="scissors">
+        <div class="game_character game_character--yellow">
+          <img src="./images/icon-scissors.svg" alt="Scissors" class="game_img">
+        </div>
+      </div>
+
+      <div class="game_item game_item--third" id="rock">
+        <div class="game_character game_character--red">
+          <img src="./images/icon-rock.svg" alt="Rock" class="game_img">
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <h3 class="results_title">You Won</h3>
+      <button class="results_btn">Play Again</button>
+    </div>
+
+    <button class="btn-rules">Rules</button>
+  </div>
+
+  <div class="modal">
+    <h2 class="modal_title">Rules</h2>
+    <img src="./images/image-rules.svg" alt="Rules image" class="modal_img">
+    <button class="modal_close">
+      <img src="./images/icon-close.svg" alt="Close" class="modal_icon">
+    </button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

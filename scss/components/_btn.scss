@@ -1,0 +1,24 @@
+.btn-rules {
+   grid-area: rules;
+   display: block;
+   padding: 10px 30px;
+   margin: 10px;
+   background: transparent;
+   border: 2px solid $outline;
+   border-radius: 8px;
+   font-size: 0.9rem;
+   font-family: inherit;
+   text-transform: uppercase;
+   transition: border 100ms;
+   color: white;
+   letter-spacing: 2px;
+   cursor: pointer;
+
+   &:hover {
+      border-color: lighten($outline, 20%);
+   }
+
+   @media (min-width: $breakpoint) {
+      justify-self: flex-end;
+   }
+}

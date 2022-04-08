@@ -1,0 +1,28 @@
+$scissors: radial-gradient(
+   circle at 50% 43%,
+   hsl(40, 84%, 53%) 70%,
+   hsl(39, 91%, 41%) 10%
+);
+$paper: radial-gradient(
+   circle at 50% 43%,
+   hsl(230, 89%, 65%) 70%,
+   hsl(230, 69%, 54%) 10%
+);
+$rock: radial-gradient(
+   circle at 50% 43%,
+   hsl(349, 70%, 56%) 70%,
+   hsl(349, 66%, 41%) 10%
+);
+$item-bg: radial-gradient(circle at 50% 60%, white 70%, rgb(214, 214, 220) 10%);
+
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$outline: hsl(217, 16%, 45%);
+
+$bg-gradient: radial-gradient(
+   circle at 50% 10%,
+   hsl(214, 47%, 23%),
+   hsl(237, 49%, 15%)
+);
+$font: 'Barlow Semi Condensed', sans-serif;
+$breakpoint: 750px;
