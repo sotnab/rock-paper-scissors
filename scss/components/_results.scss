@@ -1,13 +1,16 @@
 .results {
-   grid-area: results;
    display: none;
    flex-direction: column;
    align-items: center;
-   margin-top: 50px;
+   margin-top: 250px;
    transition: opacity 100ms;
 
    &--visible {
       display: flex;
+   }
+
+   @media (min-width: $breakpoint) {
+      margin-top: 50px;
    }
 }
 
@@ -22,18 +25,18 @@
    width: 100%;
    padding: 16px;
    margin: 20px 0 40px;
-   background: white;
+   background: $white;
    font-size: 1rem;
    font-family: inherit;
    letter-spacing: 2px;
    text-transform: uppercase;
-   transition: background 100ms;
+   transition: color 100ms;
    color: $dark-text;
    border: none;
    border-radius: 10px;
    cursor: pointer;
 
    &:hover {
-      background: darken(white, 10%);
+      color: $light-red;
    }
 }

@@ -1,13 +1,14 @@
 .btn-rules {
    grid-area: rules;
    display: block;
-   padding: 10px 30px;
-   margin: 10px;
+   padding: 10px 32px;
+   margin: 20px;
    background: transparent;
    border: 2px solid $outline;
    border-radius: 8px;
-   font-size: 0.9rem;
+   font-size: 1rem;
    font-family: inherit;
+   font-weight: 500;
    text-transform: uppercase;
    transition: border 100ms;
    color: white;

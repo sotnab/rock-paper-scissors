@@ -12,7 +12,9 @@ const HIDDEN = 'game_item--hidden'
 const YOUR = 'game_item--your';
 const OPPONENT = 'game_item--opponent';
 const WAITING = 'game_item--waiting';
-const FINAL = 'game_item--final';
+const WIN = 'game_item--win';
+
+const END = 'game--end'
 
 let score = 0;
 
@@ -35,16 +37,20 @@ const pickItem = (picked, index) => {
 
 const showResults = (pick, opponentPick) => {
    opponentPick.classList.remove(WAITING, HIDDEN);
-   pick.classList.add(FINAL);
 
    let win = isWin(pick, opponentPick);
 
    if (win) {
-      results.textContent = 'You win';
+      results.textContent = 'You won';
       scoreCounter.textContent = ++score;
+      pick.classList.add(WIN);
    } else {
       results.textContent = 'You lose';
+      opponentPick.classList.add(WIN);
    }
+
+   game.classList.add('game--end');
+
    results.parentNode.classList.add('results--visible');
    slideInResults()
 }
@@ -62,6 +68,7 @@ const setResultPositions = (pick, opponentPick) => {
 const restartGame = () => {
    results.parentNode.classList.remove('results--visible');
    game.classList.add('game--bg');
+   game.classList.remove('game--end')
 
    gameItems.forEach((item, index) => {
       item.onclick = () => pickItem(item, index);
@@ -94,9 +101,9 @@ const isWin = (player, opponent) => {
 const slideInResults = () => {
    gsap.from('.results', {
       opacity: 0,
-      x: 100,
+      y: 100,
       duration: 0.4
-   })
+   });
 }
 
 gameItems.forEach((item, index) => item.onclick = () => pickItem(item, index));

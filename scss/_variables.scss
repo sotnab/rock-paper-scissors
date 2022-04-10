@@ -1,18 +1,16 @@
-$scissors: radial-gradient(
-   circle at 50% 43%,
-   hsl(40, 84%, 53%) 70%,
-   hsl(39, 91%, 41%) 10%
-);
-$paper: radial-gradient(
-   circle at 50% 43%,
-   hsl(230, 89%, 65%) 70%,
-   hsl(230, 69%, 54%) 10%
-);
-$rock: radial-gradient(
-   circle at 50% 43%,
-   hsl(349, 70%, 56%) 70%,
-   hsl(349, 66%, 41%) 10%
-);
+$light-orange: hsl(40, 84%, 53%);
+$orange: hsl(39, 91%, 41%);
+
+$light-blue: hsl(230, 89%, 65%);
+$blue: hsl(230, 69%, 54%);
+
+$light-red: hsl(349, 70%, 56%);
+$red: hsl(349, 66%, 41%);
+
+$scissors: radial-gradient(circle at 50% 43%, $light-orange 70%, $orange 10%);
+$paper: radial-gradient(circle at 50% 43%, $light-blue 70%, $blue 10%);
+$rock: radial-gradient(circle at 50% 43%, $light-red 70%, $red 10%);
+
 $item-bg: radial-gradient(circle at 50% 60%, white 70%, rgb(214, 214, 220) 10%);
 
 $dark-text: hsl(229, 25%, 31%);
@@ -24,5 +22,14 @@ $bg-gradient: radial-gradient(
    hsl(214, 47%, 23%),
    hsl(237, 49%, 15%)
 );
+
+$win-shadow: 0 0 0px 40px rgba(white, 0.06), 0 0 0px 80px rgba(white, 0.04),
+   0 0 0px 140px rgba(white, 0.02);
+
+$mobile-win-shadow: 0 0 0px 30px rgba(white, 0.06),
+   0 0 0px 60px rgba(white, 0.04), 0 0 0px 100px rgba(white, 0.02);
+
+$white: hsl(255, 100%, 100%);
+
 $font: 'Barlow Semi Condensed', sans-serif;
 $breakpoint: 750px;

@@ -9,14 +9,15 @@
 html,
 body {
    font-family: $font;
+   font-weight: 600;
    color: white;
    font-size: 16px;
 }
 
 .container {
    display: grid;
-   grid-template-rows: auto auto 1fr auto;
-   grid-template-areas: 'header' 'game' 'results' 'rules';
+   grid-template-rows: auto 1fr auto;
+   grid-template-areas: 'header' 'game' 'rules';
    justify-items: center;
    background: $bg-gradient;
    min-height: 100%;

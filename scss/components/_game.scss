@@ -10,19 +10,35 @@
    background-repeat: no-repeat;
    background-size: 70%;
 
-   &--bg {
-      background-image: url('../images/bg-triangle.svg');
-      height: 240px;
-   }
-
    @media (min-width: $breakpoint) {
       width: 500px;
       height: 240px;
       background-size: 65%;
       background-position: center 60%;
+   }
 
-      &--bg {
+   &--bg {
+      height: 240px;
+      background-image: url('../images/bg-triangle.svg');
+
+      @media (min-width: $breakpoint) {
          height: 440px;
+      }
+   }
+
+   &--end {
+      .game_item--first {
+         transform: translateX(-20px);
+         @media (min-width: $breakpoint) {
+            transform: translateX(-120px);
+         }
+      }
+
+      .game_item--second {
+         transform: translateX(180px);
+         @media (min-width: $breakpoint) {
+            transform: translateX(400px);
+         }
       }
    }
 }
@@ -39,11 +55,17 @@
    transition: transform 400ms;
    transform-origin: center center;
 
+   &--first {
+      @media (min-width: $breakpoint) {
+         transform: translateX(-40px);
+      }
+   }
+
    &--second {
       transform: translateX(160px);
 
       @media (min-width: $breakpoint) {
-         transform: translateX(320px);
+         transform: translateX(310px);
       }
    }
 
@@ -51,7 +73,7 @@
       transform: translate(80px, 140px);
 
       @media (min-width: $breakpoint) {
-         transform: translate(160px, 260px);
+         transform: translate(140px, 260px);
       }
    }
 
@@ -76,9 +98,12 @@
       }
    }
 
-   &--final .game_character {
-      box-shadow: 0 0 0px 10px rgba(white, 0.06), 0 0 0px 30px rgba(white, 0.04),
-         0 0 0px 50px rgba(white, 0.02);
+   &--win .game_character {
+      box-shadow: $mobile-win-shadow;
+
+      @media (min-width: $breakpoint) {
+         box-shadow: $win-shadow;
+      }
    }
 }
 
@@ -98,14 +123,14 @@
 }
 
 .game_item--opponent::after {
-   content: 'OPPONENT PICKED';
+   content: 'THE HOUSE PICKED';
 }
 
 .game_character {
    position: relative;
    display: flex;
-   width: 120px;
-   height: 120px;
+   width: 125px;
+   height: 125px;
    padding: 40px;
    justify-content: center;
    align-items: center;
@@ -137,16 +162,16 @@
    }
 
    @media (min-width: $breakpoint) {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
    }
 }
 
 .game_img {
-   height: 50px;
+   width: 42px;
    z-index: 2;
 
    @media (min-width: $breakpoint) {
-      height: 65px;
+      width: 65px;
    }
 }

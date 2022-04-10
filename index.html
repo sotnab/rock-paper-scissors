@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>Rock, Paper, Scissors</title>
@@ -36,6 +36,11 @@
         </div>
       </div>
 
+      <div class="results">
+        <h3 class="results_title">You Won</h3>
+        <button class="results_btn">Play Again</button>
+      </div>
+
       <div class="game_item game_item--second" id="scissors">
         <div class="game_character game_character--yellow">
           <img src="./images/icon-scissors.svg" alt="Scissors" class="game_img">
@@ -49,11 +54,6 @@
       </div>
     </div>
 
-    <div class="results">
-      <h3 class="results_title">You Won</h3>
-      <button class="results_btn">Play Again</button>
-    </div>
-
     <button class="btn-rules">Rules</button>
   </div>
 
@@ -64,6 +64,7 @@
       <img src="./images/icon-close.svg" alt="Close" class="modal_icon">
     </button>
   </div>
+  <div class="modal-backdrop"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
   <script src="index.js"></script>
