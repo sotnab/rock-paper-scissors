@@ -60,8 +60,18 @@ const setResultPositions = (pick, opponentPick) => {
    pick.classList.remove(POSITIONS[1], POSITIONS[2]);
    pick.classList.add(POSITIONS[0], YOUR);
 
+   const { transitionDuration } = getComputedStyle(opponentPick)
+   const timeout = Number(transitionDuration.slice(0, -1)) * 1000
+   
+   // Prevent from seeing opponent's pick because of transition
+   opponentPick.style.transitionDuration = 0;
+
    opponentPick.classList.remove(POSITIONS[0], POSITIONS[2]);
    opponentPick.classList.add(POSITIONS[1], WAITING, OPPONENT);
+
+   setTimeout(() => {
+      opponentPick.style.transitionDuration = 'all';
+   }, timeout)
 }
 
 
